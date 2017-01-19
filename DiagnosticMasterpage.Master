@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DiagnosticMasterpage.master.cs" Inherits="Diagnostic_Management_System.DiagnosticMasterpage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title></title>
+     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+
+      <div>
+
+        <div class="row">
+
+            <div class="col-sm-3" style="background-color:aliceblue; height:130px; color:aliceblue">a</div>
+            
+            <div class="col-sm-6">
+               <img src="images/banner.jpg" /> 
+            </div>
+
+            <div class="col-sm-3" style="background-color:aliceblue; height:130px ;color:aliceblue" >a</div>
+            
+        </div>
+
+          <div class="row">
+
+            <div class="col-sm-3" style="background-color:beige; height:50px; color:beige">a</div>
+            
+            <div class="col-sm-6">
+               <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+    
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="DiagnosticTestType.aspx">Test Type</a></li>
+                            <li><a href="EnterTest.aspx">Enter Test</a></li>
+                            <li><a href="TestEntry.aspx">Test Request Entry</a></li>
+                        </ul>
+
+                    </div>
+                </nav>
+
+            </div>
+
+            <div class="col-sm-3" style="background-color:beige; height:50px ;color:beige" >a</div>
+            
+        </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    
+     <asp:ContentPlaceHolder ID="ContentPlaceHolderForChildScript" runat="server">
+    </asp:ContentPlaceHolder>
+
+</body>
+</html>
