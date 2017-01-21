@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,6 +39,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=16.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Administrator\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>C:\Users\Administrator\Downloads\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -254,6 +262,7 @@
     <Content Include="datatables\extensions\TableTools\images\psd\file_types.psd" />
     <Content Include="datatables\extensions\TableTools\images\psd\printer.psd" />
     <Content Include="datatables\extensions\TableTools\Readme.md" />
+    <Content Include="Payment.aspx" />
     <Content Include="TestEntry.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -286,16 +295,30 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="TestWiseReport.aspx" />
+    <Content Include="UnpaidBill.aspx" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\PaymentManager.cs" />
+    <Compile Include="BLL\TestEntryManager.cs" />
+    <Compile Include="BLL\TestReportManager.cs" />
     <Compile Include="BLL\TestSetupManager.cs" />
     <Compile Include="BLL\DiagnosticManager.cs" />
+    <Compile Include="BLL\UnpaidManager.cs" />
+    <Compile Include="DAL\Gateway\PaymentGateway.cs" />
+    <Compile Include="DAL\Gateway\TestEntryGateway.cs" />
+    <Compile Include="DAL\Gateway\TestReportGateway.cs" />
     <Compile Include="DAL\Gateway\TestSetupGateway.cs" />
     <Compile Include="DAL\Gateway\TestTypeGateway.cs" />
     <Compile Include="DAL\Gateway\Gateway.cs" />
+    <Compile Include="DAL\Gateway\UnpaidGateway.cs" />
+    <Compile Include="DAL\Model\TestReportModel.cs" />
+    <Compile Include="DAL\Model\PaymentModel.cs" />
+    <Compile Include="DAL\Model\TestEntryModel.cs" />
     <Compile Include="DAL\Model\DiagnosticModel.cs" />
+    <Compile Include="DAL\Model\UnpaidModel.cs" />
     <Compile Include="DiagnosticHome.aspx.cs">
       <DependentUpon>DiagnosticHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -324,6 +347,13 @@
     <Compile Include="EnterTest.aspx.designer.cs">
       <DependentUpon>EnterTest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestEntry.aspx.cs">
       <DependentUpon>TestEntry.aspx</DependentUpon>
@@ -331,6 +361,20 @@
     </Compile>
     <Compile Include="TestEntry.aspx.designer.cs">
       <DependentUpon>TestEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestWiseReport.aspx.cs">
+      <DependentUpon>TestWiseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestWiseReport.aspx.designer.cs">
+      <DependentUpon>TestWiseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UnpaidBill.aspx.cs">
+      <DependentUpon>UnpaidBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnpaidBill.aspx.designer.cs">
+      <DependentUpon>UnpaidBill.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

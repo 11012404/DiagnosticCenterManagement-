@@ -23,19 +23,35 @@ namespace Diagnostic_Management_System
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            int i=0;
             aDiagnosticModel.Name = txt_name.Text;
             aDiagnosticModel.Fee = Convert.ToInt32(txt_fee.Text);
             aDiagnosticModel.Type = DropList.Text;
 
-            string p = aTestSetupManager.Save(aDiagnosticModel);
+            List<DiagnosticModel> testlist = aTestSetupManager.TestSetUp();
+            foreach (var item in testlist)
+            {
+                if (item.Name.Equals(txt_name.Text))
+                {
+                    i = 1;
+                }
+            }
+            if(i==0)
+            {
+                string p = aTestSetupManager.Save(aDiagnosticModel);
+                lbl_msg.Visible = false;
+                testlist = aTestSetupManager.TestSetUp();
+                bookListGridView.DataSource = testlist;
+                bookListGridView.DataBind();
+            }
+            if (i == 1)
+            {
+                lbl_msg.Visible = true;
+                lbl_msg.Text = "Test Name Already Exit";
+            }
             
             txt_name.Text = null;
             txt_fee.Text = null;
-
-            List<DiagnosticModel> testlist = aTestSetupManager.TestSetUp();
-
-            bookListGridView.DataSource = testlist;
-            bookListGridView.DataBind();
         }
 
         private void GetTestType()

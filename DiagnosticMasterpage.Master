@@ -9,6 +9,11 @@
      <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 658px;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,7 +26,7 @@
             <div class="col-sm-3" style="background-color:aliceblue; height:130px; color:aliceblue">a</div>
             
             <div class="col-sm-6">
-               <img src="images/banner.jpg" /> 
+               <img src="images/banner.jpg" class="auto-style1" /> 
             </div>
 
             <div class="col-sm-3" style="background-color:aliceblue; height:130px ;color:aliceblue" >a</div>
@@ -37,10 +42,12 @@
                     <div class="container-fluid">
     
                         <ul class="nav navbar-nav">
-                            <li><a href="#">Home</a></li>
                             <li><a href="DiagnosticTestType.aspx">Test Type</a></li>
                             <li><a href="EnterTest.aspx">Enter Test</a></li>
                             <li><a href="TestEntry.aspx">Test Request Entry</a></li>
+                            <li><a href="Payment.aspx">Payment</a></li>
+                            <li><a href="TestWiseReport.aspx">Test Wise Report</a></li>
+                            <li><a href="UnpaidBill.aspx">Unpaid Bill</a></li>
                         </ul>
 
                     </div>

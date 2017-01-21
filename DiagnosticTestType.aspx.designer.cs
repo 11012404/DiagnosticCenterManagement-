@@ -40,13 +40,13 @@ namespace Diagnostic_Management_System {
         protected global::System.Web.UI.WebControls.Button btn_save;
         
         /// <summary>
-        /// lbl_message control.
+        /// lbl_msg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_message;
+        protected global::System.Web.UI.WebControls.Label lbl_msg;
         
         /// <summary>
         /// bookListGridView control.

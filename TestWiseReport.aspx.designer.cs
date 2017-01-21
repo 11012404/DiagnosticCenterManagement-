@@ -10,7 +10,7 @@
 namespace Diagnostic_Management_System {
     
     
-    public partial class EnterTest {
+    public partial class TestWiseReport {
         
         /// <summary>
         /// Label1 control.
@@ -22,13 +22,13 @@ namespace Diagnostic_Management_System {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// txt_name control.
+        /// txt_from control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_name;
+        protected global::System.Web.UI.WebControls.TextBox txt_from;
         
         /// <summary>
         /// Label2 control.
@@ -40,58 +40,22 @@ namespace Diagnostic_Management_System {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txt_fee control.
+        /// txt_to control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_fee;
+        protected global::System.Web.UI.WebControls.TextBox txt_to;
         
         /// <summary>
-        /// Label4 control.
+        /// btn_show control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
-        
-        /// <summary>
-        /// Label3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-        
-        /// <summary>
-        /// DropList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropList;
-        
-        /// <summary>
-        /// btn_save control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_save;
-        
-        /// <summary>
-        /// lbl_msg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_msg;
+        protected global::System.Web.UI.WebControls.Button btn_show;
         
         /// <summary>
         /// bookListGridView control.
@@ -101,5 +65,14 @@ namespace Diagnostic_Management_System {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView bookListGridView;
+        
+        /// <summary>
+        /// btn_pdf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_pdf;
     }
 }

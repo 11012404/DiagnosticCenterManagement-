@@ -24,16 +24,32 @@ namespace Diagnostic_Management_System
 
         protected void btn_save_Click(object sender, EventArgs e)
         {
+            int i = 0;
             aDiagnosticModel.Name = txt_test_typy.Text;
-
-            txt_test_typy.Text = null;
-            string p = aDiagnosticManager.Save(aDiagnosticModel);
-            //lbl_message.Text = p;
-
             List<DiagnosticModel> testlist = aDiagnosticManager.TestTypes();
 
-            bookListGridView.DataSource = testlist;
-            bookListGridView.DataBind();
+            foreach (var item in testlist)
+            {
+                if (item.Name.Equals(txt_test_typy.Text))
+                {
+                    i = 1;
+                }
+            }
+            if (i == 0)
+            {
+                string p = aDiagnosticManager.Save(aDiagnosticModel);
+                lbl_msg.Visible = false;
+                testlist = aDiagnosticManager.TestTypes();
+                bookListGridView.DataSource = testlist;
+                bookListGridView.DataBind();
+            }
+            if (i == 1)
+            {
+                lbl_msg.Visible = true;
+                lbl_msg.Text = "Test Type Already Exit";
+            }
+            txt_test_typy.Text = null;
+            
         }
         private void GetTestType()
         {
